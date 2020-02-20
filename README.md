@@ -17,7 +17,7 @@ and then run the following command in another terminal
 ```
 curl --path-as-is 'http://127.0.0.1:8001/api/'
 ```
-You can see the the code execution vulnerability are executed mutliple times.
+You can see the code execution vulnerability are executed mutliple times.
 
 
 ## Vulnerability 2 Exploit

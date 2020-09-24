@@ -1,11 +1,13 @@
 'use strict';
 
-const	http     = require('http'),
-    algoserv = require('algo-httpserv'),
-    fs	     = require('fs'),
-    yaml     = require('js-yaml'),
-    yamlTo   = require('to'),
-    yamlConf = require('node-yaml-config');// the vulnerable library is include to check whether we have false positives
+const http           = require('http'),
+      algoserv       = require('algo-httpserv'),
+      fs             = require('fs'),
+      yaml           = require('js-yaml'),
+      yamlTo         = require('to'),
+      yamlConf       = require('node-yaml-config'),// the vunlerable library is include to check whether we have false postives
+      _zipObjectDeep = require('lodash/zipObjectDeep'),
+      marked         = require('marked');
 
 
 // call vulnerable method js-yaml.load directly
@@ -37,4 +39,13 @@ exports.listen = function() {
 
 exports.close = function(callback) {
     this.server.close(callback);
+}
+
+// call the vulnerable methods like how some real world projects call them
+function InlineLexer(links, options) {
+  marked.InlineLexer.call(this, links, options);
+}
+
+function zipObjectDeep(props, values) {
+  return _zipObjectDeep(props, values);
 }

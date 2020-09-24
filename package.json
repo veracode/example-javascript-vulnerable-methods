@@ -19,7 +19,9 @@
     "node-yaml-config": "0.0.5",
     "semver": "5.7.1",
     "to": "0.2.9",
-    "url": "0.11.0"
+    "url": "0.11.0",
+    "lodash": "4.17.15",
+    "marked": "0.3.19"
   },
   "devDependencies": {
     "mocha": "^7.0.1"

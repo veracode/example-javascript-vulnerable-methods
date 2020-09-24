@@ -20,7 +20,7 @@
     "semver": "5.7.1",
     "to": "0.2.9",
     "url": "0.11.0",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "marked": "0.3.19"
   },
   "devDependencies": {
